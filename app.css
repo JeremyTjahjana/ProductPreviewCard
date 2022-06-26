@@ -1,0 +1,138 @@
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+    margin: 0;
+}
+
+:root {
+    --DarkCyan: hsl(158, 36%, 37%);
+    --Cream: hsl(30, 38%, 92%);
+    --Verydarkblue: hsl(212, 21%, 14%);
+    --Darkgrayishblue: hsl(228, 12%, 48%);
+    --White: hsl(0, 0%, 100%);
+
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    background-color: var(--Cream);
+}
+
+.container {
+    overflow: hidden;
+    flex-direction: column;
+    display: flex;
+    background-color: white;
+    width: min(90%, 640px);
+    height: 640px;
+    border-radius: 20px;
+}
+
+.mobile-img {
+    max-height: 40%;
+    width: 100%;
+    border-radius: 20px 20px 0 0;
+}
+
+.desktop-img {
+    display: none;
+}
+
+.desktop-img .content {
+    width: 100%;
+    padding: 1.5rem;
+}
+
+.content {
+    padding: 1.5rem;
+}
+
+h1 {
+    color: var(--Verydarkblue);
+    font-size: 2.25rem;
+    margin: 1rem 0;
+    font-family: Fauncier;
+}
+
+h2 {
+    color: var(--DarkCyan);
+    font-size: 2.125rem;
+    margin-top: 2rem;
+    display: inline-block;
+}
+
+
+#perfume {
+    font-size: 0.85rem;
+    letter-spacing: 0.25rem;
+    font-family: Montserrat;
+    color: var(--Darkgrayishblue);
+}
+
+
+#price {
+    font-family: Fauncier;
+    font-size: 1.125rem;
+    text-decoration: line-through;
+    margin-left: 1rem;
+    color: var(--Darkgrayishblue);
+}
+
+button {
+    font-size: 1rem;
+    border-radius: 10px 16px;
+    padding: 16px 0;
+    border: none;
+    text-align: center;
+    font-weight: 700;
+    width: 100%;
+    margin-top: 1rem;
+    color: var(--White);
+    background-color: var(--DarkCyan);
+    display: block;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: hsl(158, 36%, 17%);
+}
+
+p {
+    font-size: 0.75rem;
+    font-family: Montserrat;
+    color: var(--Darkgrayishblue);
+    line-height: 1.5rem;
+    margin-bottom: 0.5rem
+}
+
+
+@media screen and (min-width: 650px) {
+    .container {
+        flex-direction: row;
+        max-width: 640px;
+        height: 440px;
+    }
+
+    .content {
+        padding: 2rem;
+    }
+
+    .mobile-img {
+        display: none;
+    }
+
+    .desktop-img {
+        width: 100%;
+        display: block;
+    }
+
+    h2 {
+        margin: 1.5rem 0;
+    }
+
+}
